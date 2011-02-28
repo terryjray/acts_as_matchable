@@ -8,15 +8,15 @@ on ActsAsSearchable. See: https://github.com/bsampietro/acts_as_searchable
 
 ActsAsMatchable is similar to ActsAsSearchable with the following differences:
 
-1. Rather than full or partial text matching, ActsAsMatchable is designed to
+1) Rather than full or partial text matching, ActsAsMatchable is designed to
 support pattern and regular expression matching against one or more attributes of
 a ruby object. So, you can find patterns like phone numbers, email addresses,
 tax ids, etc that may appear in various attributes of an object.
 
-2. ActsAsMatchable is used to extend ActiveRecord objects however it does not
+2) ActsAsMatchable is used to extend ActiveRecord objects however it does not
 utilize any SQL thus making it database agnostic.
 
-3. Matched attributes (if any) are returned from the pattern_match method call as
+3) Matched attributes (if any) are returned from the pattern_match method call as
 a hash in the format {:col_name => value}
 
 == Install
