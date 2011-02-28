@@ -8,25 +8,25 @@ on ActsAsSearchable. See: https://github.com/bsampietro/acts_as_searchable
 
 ActsAsMatchable is similar to ActsAsSearchable with the following differences:
 
-1) Rather than full or partial text matching, ActsAsMatchable is designed to
+Rather than full or partial text matching, ActsAsMatchable is designed to
 support pattern and regular expression matching against one or more attributes of
 a ruby object. So, you can find patterns like phone numbers, email addresses,
 tax ids, etc that may appear in various attributes of an object.
 
-2) ActsAsMatchable is used to extend ActiveRecord objects however it does not
+ActsAsMatchable is used to extend ActiveRecord objects however it does not
 utilize any SQL thus making it database agnostic.
 
-3) Matched attributes (if any) are returned from the pattern_match method call as
+Matched attributes (if any) are returned from the pattern_match method call as
 a hash in the format {:col_name => value}
 
-== Install
+### Install
 
 Currently, this only exists as a Rails plugin, so:
 
 script/plugin install git://github.com/terryjray/acts_as_matchable
 
 
-== Synopsis
+### Synopsis
 
 
 class BlogComment < ActiveRecord::Base
@@ -35,26 +35,7 @@ class BlogComment < ActiveRecord::Base
 
 end
 
-# impl code somewhere...if the blog comment object contains a phone number
-# phone_numbers will contain a hash of column names along with values
 phone_numbers = comment.pattern_match(/\d\d\d[-]\d\d\d[-]\d\d\d\d/)
-
-
-# only want to check the 'content' and 'name' columns of BlogComment, then class definition
-# would look like
-
-class BlogComment < ActiveRecord::Base
-
-    acts_as_matchable :content,:name
-
-end
-
-# also, leaving off the :all argument has the same effect as providing it ;)
-
-
-
-
-
 
 
 Copyright (c) 2011 Centrix Information Solutions, LLC, released under the MIT license
