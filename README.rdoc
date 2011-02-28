@@ -8,16 +8,11 @@ on ActsAsSearchable. See: https://github.com/bsampietro/acts_as_searchable
 
 ActsAsMatchable is similar to ActsAsSearchable with the following differences:
 
-* Rather than full or partial text matching, ActsAsMatchable is designed to
-support pattern and regular expression matching against one or more attributes of
-a ruby object. So, you can find patterns like phone numbers, email addresses,
-tax ids, etc that may appear in various attributes of an object.
+* Rather than full or partial text matching, ActsAsMatchable is designed to support pattern and regular expression matching against one or more attributes of a ruby object. So, you can find patterns like phone numbers, email addresses,tax ids, etc that may appear in various attributes of an object.
 
-* ActsAsMatchable is used to extend ActiveRecord objects however it does not
-utilize any SQL thus making it database agnostic.
+* ActsAsMatchable is used to extend ActiveRecord objects however it does not utilize any SQL thus making it database agnostic.
 
-* Matched attributes (if any) are returned from the pattern_match method call as
-a hash in the format {:col_name => value}
+* Matched attributes (if any) are returned from the pattern_match method call as a hash in the format {:col_name => value}
 
 == Install
 
@@ -40,6 +35,10 @@ Currently, this only exists as a Rails plugin, so:
 
     # to specify certain fields (not all) just include the last after the declaration
     acts_as_matchable :first_name,:last_name,:description
+
+== More Info
+
+For an extended example, updates, and probably more detail than you'd ever need outside the source itself, you can see my blog at http://terryjray.blogspot.com/
 
 
 Copyright (c) 2011 Centrix Information Solutions, LLC, released under the MIT license
