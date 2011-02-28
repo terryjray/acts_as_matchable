@@ -36,9 +36,23 @@ Currently, this only exists as a Rails plugin, so:
     # to specify certain fields (not all) just include the last after the declaration
     acts_as_matchable :first_name,:last_name,:description
 
+== Contributing
+
+Feel free to pitch in. You know the drill:
+
+   1. Fork the project.
+   2. Create a topic branch.
+   3. Implement your feature or bug fix.
+   4. Please at least add a test in the rspec file that demonstrates your addition
+   5. Commit and push your changes.
+   6. Submit a pull request.
+
+I'll do my best to keep up. Thx!
+
 == More Info
 
-For an extended example, updates, and probably more detail than you'd ever need outside the source itself, you can see my blog at http://terryjray.blogspot.com/
+For an extended example, updates, and probably more detail than you'd ever need outside the source itself, you can see my announcement for the project at http://terryjray.blogspot.com/2011/02/introducing-actsasmatchable-plugin.html
 
+== Copyright
 
 Copyright (c) 2011 Centrix Information Solutions, LLC, released under the MIT license
