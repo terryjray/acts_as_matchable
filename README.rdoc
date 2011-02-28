@@ -16,9 +16,15 @@ ActsAsMatchable is similar to ActsAsSearchable with the following differences:
 
 == Install
 
+Before you install this plugin, make sure you have the rspec-plugin-generator and rspec-rails plugins if you don't already (and you really should ;)
+
+    script/plugin install git://github.com/dchelimsky/rspec-rails.git
+    script/plugin install git://github.com/patmaddox/rspec-plugin-generator.git
+
 Currently, this only exists as a Rails plugin, so:
 
     script/plugin install git://github.com/terryjray/acts_as_matchable
+
 
 
 == Synopsis
